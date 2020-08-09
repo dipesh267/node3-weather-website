@@ -2,11 +2,11 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const currentWeather = require('./utils/currentWeather.js')
-const geocode = require('./utils/geocode.js')
+//const geoCode = require('./utils/geocode.js')
 
 const { response } = require('express')
 const geoCode = require('../../weather-app/utils/geocode.js')
-const getWeather = require('../../weather-app/utils/currentWeather.js')
+//const getWeather = require('../../weather-app/utils/currentWeather.js')
 
 
 
