@@ -11,6 +11,7 @@ const getWeather = require('../../weather-app/utils/currentWeather.js')
 
 
 const app = express()
+const port = process.env.PORT || 3000   //to pull port provided by Heroku
 const publicDirectory = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')//default path express expects is "views" but if dno't want it to be called
                                                    //views, then we have to create a path to it.
@@ -83,6 +84,7 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000, ()=>{
-    console.log('server started on port 3000')
+//app.listen(3000, ()=>{ //3000 if we're running locally
+app.listen(port, ()=>{
+    console.log('server started on port '+  port)
 })
