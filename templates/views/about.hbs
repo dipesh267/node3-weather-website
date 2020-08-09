@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About</title>
+        <link rel="icon" href="/img/weather-icon.png">
+        <link rel="stylesheet" href="./css/styles.css"> <!--relateive path-->
+        <!--link rel="stylesheet" href="/css/stles.css"--> <!--absolute path-->
+    </head>
+    <body>
+         <div class="main-content">
+            {{>headers}}
+            <img class="portrait" src="./img/cocoa.jpg">
+            <h3>Created by {{name}} and he is {{age}} years old</h3>
+        </div>
+        {{>footer}}
+    </body>
+</html>

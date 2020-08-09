@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>404</title>
+        <link rel="icon" href="/img/weather-icon.png">
+        <link rel="stylesheet" href="/css/styles.css"> <!--absolute path becuase many pages in different subfolders might use it-->
+        
+    </head>
+    <body>
+         <div class="main-content">
+            {{>headers}}
+            <h1>Oops {{errorMessage}}</h1>
+        </div>
+        {{>footer}}
+    </body>
+</html>
