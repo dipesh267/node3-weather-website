@@ -2,13 +2,10 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const currentWeather = require('./utils/currentWeather')
-//const geoCode = require('./utils/geocode')
+const geoCode = require('./utils/geocode')
+//const geoCode = require('../../weather-app/utils/geocode')
 
 const { response } = require('express')
-const geoCode = require('../../weather-app/utils/geocode')
-//const getWeather = require('../../weather-app/utils/currentWeather.js')
-
-
 
 const app = express()
 const port = process.env.PORT || 3000   //to pull port provided by Heroku
