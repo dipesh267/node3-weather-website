@@ -23,9 +23,6 @@ weatherForm.addEventListener('submit',(e)=>{
         response.json().then((data)=>{
             if (data.error){messageOne.textContent=data.error}
             else{
-                //console.log(data.location)
-                //console.log(data.forecast.temperature)
-                //console.log(data.forecast)
                 messageOne.textContent = ''
                 messageTwo.textContent=data.forecast.temperature
             }
