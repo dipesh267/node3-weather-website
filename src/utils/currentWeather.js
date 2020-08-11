@@ -2,11 +2,12 @@ const request = require('request')
 
 const getWeather = (lat, long, callback)=>{
 
-    const weatherUrl = 'http://api.weatherstack.com/current?access_key=41e00794e8f2d4fcd160d8f4414c0c14&query='+lat+','+long+'&units=f'
-    request({url:weatherUrl,json:true}, (error, response)=>{
+    const url = 'http://api.weatherstack.com/current?access_key=41e00794e8f2d4fcd160d8f4414c0c14&query='+lat+','+long+'&units=f'
+    console.log(url)
+    request({url:url,json:true}, (error, response)=>{
         
         if(error){callback('Cannot call API', undefined)}
-        else if (response.body.error){callback('Error in calling API',undefined)}
+        else if (response.body.error){callback('Error getting current weather',undefined)}
         else{
             const body = response.body
             const data = {
