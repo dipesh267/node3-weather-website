@@ -49,11 +49,11 @@ app.get('/weather',(req,res)=>{
             error:'you must send a city name'
         })
     }
-    geoCode(req.query.address, (error, {lattitude, longitude, location}={})=>{   //geoCode('arugument', (function)=>{})
+    geoCode(req.query.address, (error, {latitude, longitude, location}={})=>{   //geoCode('arugument', (function)=>{})
         if(error){ 
             return res.send({error})
         }
-        currentWeather(lattitude,longitude, (error, forecastData)=>{
+        currentWeather(latitude,longitude, (error, forecastData)=>{
             if(error){
                 return res.send({error})
             }
